@@ -9,4 +9,18 @@ class index extends Component {
 const count = 100;
 export { count };
 
-export default index;
+class Test {
+    constructor(x) {
+        this.x = x;
+        this.state = {
+            name: 'jojo'
+        };
+        this.getname = this.getname.bind();
+    }
+    getname(name) {
+        return name;
+    }
+}
+
+const P = new Test();
+export default P;
