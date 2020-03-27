@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-// import TestComponent from './pages/TestComponent';
-import P from './pages/TestComponent';
+import TestComponent from './pages/TestComponent';
+// import P from './pages/TestComponent';
 
 // function App() {
 //     const str = 'hello';
@@ -26,14 +26,17 @@ import P from './pages/TestComponent';
 // }
 
 class App extends Component {
+    static username = 'steve';
+
+    static getname = () => {};
     state = {
         name: 'jojo'
     };
 
     render() {
-        console.log(P);
         return (
             <div className="App">
+                <TestComponent />
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>
@@ -48,5 +51,4 @@ class App extends Component {
         );
     }
 }
-
 export default App;
