@@ -6,8 +6,15 @@ class index extends Component {
             <div>
                 測試組件
                 <UserPage>
-                    <div>hahahaha</div>
+                    <div>class組件的hahahaha</div>
                 </UserPage>
+                <AppPages>
+                    {args => (
+                        <div>
+                            我是AppPages的子元素<p>{args.name}</p>
+                        </div>
+                    )}
+                </AppPages>
             </div>
         );
     }
@@ -23,6 +30,15 @@ class UserPage extends Component {
         );
     }
 }
+
+const AppPages = props => {
+    return (
+        <div>
+            我是函數組件
+            {props.children({ name: 'apple' })}
+        </div>
+    );
+};
 
 export default index;
 
