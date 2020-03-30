@@ -8,14 +8,16 @@ class index extends Component {
                 測試組件
                 <h1 style={{ color: 'red', fontSize: 36 }}>我是h1標題</h1>
                 <p className="content">我是哈哈哈p段落</p>
-                <LoadingBar loading={true} />
+                <App user={{ id: '1' }} />
             </div>
         );
     }
 }
 
-const LoadingBar = ({ loading }) => {
-    return <div className="wrap">{loading ? <div>加載中…</div> : null}</div>;
+const App = ({ user }) => {
+    let isLogin = false;
+    if (user && user.id) isLogin = true;
+    return <div>{isLogin ? <div>你已登錄</div> : <div>尚未登錄</div>}</div>;
 };
 
 export default index;
