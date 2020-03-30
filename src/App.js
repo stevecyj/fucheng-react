@@ -8,12 +8,16 @@ class App extends Component {
 
     static getname = () => {};
     state = {
-        name: 'jojo'
+        name: 'jojo',
+        loading: true
     };
 
     render() {
+        console.log(this);
+
         return (
             <div className="App">
+                {this.state.loading ? <div>加載中...</div> : null}
                 <TestComponent />
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
