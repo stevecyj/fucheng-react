@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './style.scss';
+import styles from './style.module.scss';
 
 class index extends Component {
     render() {
@@ -7,7 +7,7 @@ class index extends Component {
             <div className="wrap">
                 測試組件
                 <h1>我是h1標題</h1>
-                <p className="content">我是哈哈哈p段落</p>
+                <p className={styles.content}>我是哈哈哈p段落</p>
             </div>
         );
     }
